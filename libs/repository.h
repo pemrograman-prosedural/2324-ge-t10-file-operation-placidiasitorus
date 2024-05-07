@@ -5,10 +5,12 @@
 #include "dorm.h"
 #include "student.h"
 
-/**
- * @brief define your structure, enums, globally accessible variables, and function prototypes here.
- * The actual function implementation should be defined in the corresponding source file.
- *
- */
+typedef struct {
+    int id;
+    char name[50];
+    // menambahkan field lain yang diperlukan
+} Repository;
+// prototype fungsi
+void print_repository( const Repository *repo );
 
 #endif

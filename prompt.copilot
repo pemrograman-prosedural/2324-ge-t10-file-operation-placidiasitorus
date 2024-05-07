@@ -1,0 +1,6 @@
+file operation pada bahasa c
+untuk apa struktru data pada file operation?
+bagaimana jika Data bersumber dari berkas yang disimpan dalam direktori storage apakah masih perlu membuat struktur?
+for (int i = 1; i < _argc; i++) { jelaskan
+_argc; kenapa harus menggunakan garis bawah
+apakah file header dan file.c nya harus di isi untuk file operation ini?

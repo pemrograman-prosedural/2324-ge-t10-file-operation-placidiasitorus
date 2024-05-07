@@ -1,7 +1,8 @@
 #include "repository.h"
+#include <stdio.h>
 
-/**
- * @brief Define the complete function definition here. Be sure to enlist the prototype of each function
- * defined here in the corresponding header file.
- *
- */
+
+void print_repository( const Repository *repo ) {
+    printf("ID: %d\n", repo->id);
+    printf("Name: %s\n", repo->name);
+}
