@@ -18,9 +18,25 @@ int main(int _argc, char **_argv)
 
     char line[100];
     while (fgets(line, sizeof(line), file) != NULL)  {
-        printf("%s", line);
+        // Parse the line and perform the corresponding action
+        char command[10];
+        sscanf(line, "%s", command);
+
+        if (strcmp(command, "dorm-print-all-detail") == 0) {
+            dorm_print_all_detail();
+        } else if (strcmp(command, "student-print-all-detail") == 0) {
+            student_print_all_detail();
+        } else if (strcmp(command, "student-add") == 0) {
+            char id[10], name[50], birth_year[5], gender[10];
+            sscanf(line, "%s#%[^#]#%[^#]#%[^\n]", command, id, name, birth_year, gender);
+            student_add(id, name, atoi(birth_year), gender);
+        } else if (strcmp(command, "dorm-add") == 0) {
+            char name[20], capacity[5], gender[10];
+            sscanf(line, "%s#%[^#]#%[^#]#%[^\n]", command, name, capacity, gender);
+            dorm_add(name, atoi(capacity), gender);
+        }
     }
-    
+
     fclose(file);
 
     // cek argumen
